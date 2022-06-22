@@ -20,7 +20,7 @@ See Configuration below for detailed configuration instructions.
 With `insertMock.mockDataset` you can add the dataset you want to use.  
 Add in the form `dataset name: [string]`.
 
-```JSON
+```js
 "insertMock.mockDataset": {
   "default": [
     "Arthur",
