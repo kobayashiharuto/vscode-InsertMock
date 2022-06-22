@@ -3,11 +3,11 @@
   "displayName": "Insert Mock",
   "description": "Easily insert mock data using the multi-cursor.",
   "publisher": "GleamingCake",
-  "icon": "images/.png",
+  "icon": "images/icon.png",
   "author": {
     "name": "GleamingCake"
   },
-  "license": "SEE LICENSE IN LICENSE.TXT",
+  "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/kobayashiharuto/vscode-InsertMock",
   "galleryBanner": {
     "color": "#333333",
