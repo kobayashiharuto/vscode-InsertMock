@@ -1,0 +1,97 @@
+{
+  "name": "insert-mock",
+  "displayName": "Insert Mock",
+  "description": "Easily insert mock data using the multi-cursor.",
+  "publisher": "GleamingCake",
+  "icon": "images/.png",
+  "author": {
+    "name": "GleamingCake"
+  },
+  "license": "SEE LICENSE IN LICENSE.TXT",
+  "homepage": "https://github.com/kobayashiharuto/vscode-InsertMock",
+  "galleryBanner": {
+    "color": "#333333",
+    "theme": "dark"
+  },
+  "keywords": [
+    "insert",
+    "mock",
+    "multi"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kobayashiharuto/vscode-InsertMock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kobayashiharuto/vscode-InsertMock/issues"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.68.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.insert-mock.default",
+    "onCommand:extension.insert-mock.custom"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.insert-mock.default",
+        "title": "Insert Mock: Default"
+      },
+      {
+        "command": "extension.insert-mock.custom",
+        "title": "Insert Mock: Custom"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Insert Mock configuration",
+      "properties": {
+        "insertMock.mockDataset": {
+          "type": "object",
+          "default": {
+            "default": [
+              "Arthur",
+              "Daniel",
+              "John",
+              "Oliver",
+              "Steve"
+            ]
+          },
+          "description": "Dataset to be used."
+        },
+        "insertMock.needShuffle": {
+          "type": "boolean",
+          "default": false,
+          "description": "Shuffle dataset on insertion?"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.68.0",
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.16.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "typescript": "^4.7.2",
+    "@vscode/test-electron": "^2.1.3"
+  }
+}
